@@ -29,3 +29,8 @@ else
   echo "Python 3: already installed"
 fi
 
+# Install pycryptodomex
+echo "Installing pycryptodomex"
+sudo apt-get --yes install python3-pip
+python3 -m pip install pycryptodomex
+echo "Installed pycryptodomex"
