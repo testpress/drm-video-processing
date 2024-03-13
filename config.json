@@ -1,0 +1,8 @@
+{
+  "org_code": "your_org_code",
+  "content_id": "your_content_id",
+  "widevine_aes_key": "your_widevine_aes_key",
+  "widevine_iv": "your_widevine_iv",
+  "video_path": "input.mp4"
+}
+
