@@ -18,14 +18,15 @@ def read_config():
         print("Error: Invalid JSON format in config.json.")
         return None
 
+
 def generate_signature(data, key, iv):
-    hash_value = hashlib.sha1(base64.b64encode(data.encode())).digest()
+    hash = hashlib.sha1(data.encode()).digest()
     cipher = AES.new(
         binascii.unhexlify(key),
         AES.MODE_CBC,
         binascii.unhexlify(iv),
     )
-    padded_hash = pad(hash_value, AES.block_size, style="pkcs7")
+    padded_hash = pad(hash, AES.block_size, style="pkcs7")
     signature = cipher.encrypt(padded_hash)
     return base64.b64encode(signature).decode()
 
