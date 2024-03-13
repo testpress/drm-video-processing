@@ -1,20 +1,14 @@
+#!/bin/bash
+
 REQUIRED_PKG="ffmpeg"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "installed")
-echo Checking for $REQUIRED_PKG: $PKG_OK
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG | grep "installed")
+
+echo "Checking for $REQUIRED_PKG: $PKG_OK"
 
 if [ "" = "$PKG_OK" ]; then
   echo "No $REQUIRED_PKG. Setting up $REQUIRED_PKG."
   sudo apt-get --yes install $REQUIRED_PKG 
-  echo "Installed ffmpeg"
-fi
-
-# Install jq
-if ! which jq > /dev/null 2>&1; then
-  echo "Installing jq"
-  sudo apt-get --yes install jq
-  echo "Installed jq"
-else
-  echo "jq: already installed"
+  echo "Installed $REQUIRED_PKG"
 fi
 
 if ! which packager > /dev/null 2>&1; then
@@ -24,6 +18,14 @@ if ! which packager > /dev/null 2>&1; then
   sudo chmod +rx /usr/local/bin/packager
   echo "Shaka packager installation completed successfully"
 else
-  echo "shaka packager: already installed"
+  echo "Shaka packager: already installed"
+fi
+
+if ! type python3 > /dev/null 2>&1; then
+  echo "Installing Python 3"
+  sudo apt-get --yes install python3
+  echo "Installed Python 3"
+else
+  echo "Python 3: already installed"
 fi
 
