@@ -6,9 +6,13 @@ def get_encoded_content_data():
         with open('config.json', 'r') as config_file:
             config_data = json.load(config_file)
             content_id = config_data.get('content_id', '')
+            drm_type = config_data.get('drm_type', '')
+            download = config_data.get('download', True)
 
             data = {
-                "content_id": content_id
+                "content_id": content_id,
+                "drm_type": drm_type,
+                "download": download
             }
 
             data_str = json.dumps(data, separators=(',', ':'))
@@ -26,5 +30,4 @@ if __name__ == "__main__":
     encoded_content_data = get_encoded_content_data()
 
     if encoded_content_data:
-        print("content_data :",encoded_content_data)
-
+        print("content_data:", encoded_content_data)

@@ -3,6 +3,7 @@
   "content_id": "your_content_id",
   "widevine_aes_key": "your_widevine_aes_key",
   "widevine_iv": "your_widevine_iv",
-  "video_path": "input.mp4"
+  "video_path": "your_video_path",
+  "drm_type": "your_drm_type",
+  "download": your_download_value(true/false)
 }
-
