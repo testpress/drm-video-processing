@@ -38,3 +38,21 @@ Packaging completed successfully.
 ```
 
 You will find the generated MPD file (h264.mpd) in the current working directory.
+
+
+
+## Step 4: Generate License URL
+
+Run the `get_license_url.py` script to generate your license URL. Use the following command:
+
+```bash
+python3 get_license_url.py
+```
+
+You will receive your license URL in the following format:
+
+```
+License URL: https://app.tpstreams.com/api/v1/69xt46/drm_license/?data=eyJjb250ZW50X2RhdGEiOiJleUpqYjI1MFpXNTBYMmxrSWpvaVpHUmtaREZrWVdVNE9EWXlORE5pWlRnMU56RTJZekZtWWpnNE9UVTJORFVpTENKa2NtMWZkSGx3WlNJNkluZHBaR1YyYVc1bElpd2laRzkzYm14dllXUWlPbVpoYkhObGZRPT0iLCJzaWduYXR1cmUiOiI5QkM5aTloTFVMWHlmaXlBdXE5aHRhRGZYb3FRam9PWGtDOWlVbGd5Z3R3PSJ9
+```
+
+The `get_license_url.py` script internally calls two methods, `get_encoded_content_data` and `generate_signature`, both of which are required to generate the license URL. Ensure you've run these steps before generating the license URL.
