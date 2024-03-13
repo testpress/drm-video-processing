@@ -2,6 +2,8 @@
 
 1. Run the following command to make the `install.sh` script executable and install dependencies:
 
+   This script installs the required dependencies, including ffmpeg and shaka packager.
+
    ```bash
    chmod +x install.sh && ./install.sh
    ```
