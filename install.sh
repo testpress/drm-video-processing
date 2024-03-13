@@ -8,6 +8,15 @@ if [ "" = "$PKG_OK" ]; then
   echo "Installed ffmpeg"
 fi
 
+# Install jq
+if ! which jq > /dev/null 2>&1; then
+  echo "Installing jq"
+  sudo apt-get --yes install jq
+  echo "Installed jq"
+else
+  echo "jq: already installed"
+fi
+
 if ! which packager > /dev/null 2>&1; then
   echo "Installing Shaka packager"
   wget https://github.com/shaka-project/shaka-packager/releases/download/v2.6.1/packager-linux-x64
@@ -17,3 +26,4 @@ if ! which packager > /dev/null 2>&1; then
 else
   echo "shaka packager: already installed"
 fi
+
