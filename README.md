@@ -55,4 +55,25 @@ You will receive your license URL in the following format:
 License URL: https://app.tpstreams.com/api/v1/69xt46/drm_license/?data=eyJjb250ZW50X2RhdGEiOiJleUpqYjI1MFpXNTBYMmxrSWpvaVpHUmtaREZrWVdVNE9EWXlORE5pWlRnMU56RTJZekZtWWpnNE9UVTJORFVpTENKa2NtMWZkSGx3WlNJNkluZHBaR1YyYVc1bElpd2laRzkzYm14dllXUWlPbVpoYkhObGZRPT0iLCJzaWduYXR1cmUiOiI5QkM5aTloTFVMWHlmaXlBdXE5aHRhRGZYb3FRam9PWGtDOWlVbGd5Z3R3PSJ9
 ```
 
+
+## Step 5: Play the Video in Player
+
+1. Copy the generated license URL and the path to the MPD (Media Presentation Description) file.
+2. Open the `index.html` file.
+3. Replace the placeholder values in the `player.src` section with your license URL and MPD file path.
+4. Save the changes.
+
+Now, to view the video, follow these steps:
+
+1. Open a terminal.
+2. Navigate to the directory containing your modified `index.html` file.
+3. Run the following command to start a local server:
+
+    ```bash
+    python -m http.server
+    ```
+
+4. Visit [http://localhost:8000/index.html](http://localhost:8000/index.html) in your web browser.
+
+You should now be able to play the video using the configured DRM settings and the provided license URL. If any issues occur, ensure that the MPD file path and license URL are correctly set in the `index.html` file.
 The `get_license_url.py` script internally calls two methods, `get_encoded_content_data` and `generate_signature`, both of which are required to generate the license URL. Ensure you've run these steps before generating the license URL.
