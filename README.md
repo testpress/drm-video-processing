@@ -81,7 +81,7 @@ You should now be able to play the video using the configured DRM settings and t
 To add step 6 to your instructions, you can follow these guidelines:
 
 
-### Step 6: Get FairPlay URI, Key, and IV to Encrypt the Video with FairPlay DRM
+## Step 6: Get FairPlay URI, Key, and IV to Encrypt the Video with FairPlay DRM
 
 
 1. Run the following command to execute the script:
