@@ -34,3 +34,8 @@ echo "Installing pycryptodomex"
 sudo apt-get --yes install python3-pip
 python3 -m pip install pycryptodomex
 echo "Installed pycryptodomex"
+
+# Install requests library
+echo "Installing requests library"
+python3 -m pip install requests
+echo "Installed requests library"
