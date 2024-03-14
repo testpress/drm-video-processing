@@ -77,3 +77,24 @@ Now, to view the video, follow these steps:
 4. Visit [http://localhost:8000/index.html](http://localhost:8000/index.html) in your web browser.
 
 You should now be able to play the video using the configured DRM settings and the provided license URL. If any issues occur, ensure that the MPD file path and license URL are correctly set in the `index.html` file.
+
+To add step 6 to your instructions, you can follow these guidelines:
+
+
+### Step 6: Get FairPlay URI, Key, and IV to Encrypt the Video with FairPlay DRM
+
+
+1. Run the following command to execute the script:
+
+    ```bash
+    python3 get_key_iv_and_uri.py
+    ```
+    This script will send a POST request to the URL `https://app.tpstreams.com/api/v1/{org_code}/fairplay_key/` and obtain the FairPlay URI, Key, and IV
+   
+2. You will receive a response similar to the following:
+
+    ```plaintext
+    Response: b'{"iv":"c60e93703a0c423696b9dfa0e02b60d2","key":"a8031c8ba7474846b137ffc328cf2304","uri":"skd://4a961191b7764338b8a6ca3259023c2d"}'
+    ```
+
+3. Update the values of FairPlay URI, Key, and ID in `config.json` provided in the response
