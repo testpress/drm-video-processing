@@ -122,8 +122,8 @@ To play the encrypted video using FairPlay DRM, follow these steps:
 
 1. Open the `index.html` file located in your project directory.
 
-2. Replace the placeholder values in the `player.src` section with the path to your FairPlay-encrypted M3U8 file (`video.m3u8`) and the FairPlay license URL obtained in [Step 5](#step-5-play-the-video-in-player).
+2. Replace the placeholder values in the `player.src` section with the path to your FairPlay-encrypted M3U8 file (`video.m3u8`) and the FairPlay license URL obtained in [Step 6](#step-6-get-fairplay-uri-key-and-iv-to-encrypt-the-video-with-fairplay-drm).
 
 3. Save the changes to the `index.html` file.
 
-4. Navigate back to Step 5 and follow the instructions to play the encrypted video.
+4. Navigate back to  [Step 5](#step-5-play-the-video-in-player) and follow the instructions to play the encrypted video.
