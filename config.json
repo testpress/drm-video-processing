@@ -5,5 +5,8 @@
   "widevine_iv": "your_widevine_iv",
   "video_path": "your_video_path",
   "drm_type": "your_drm_type",
-  "download": your_download_value(true/false)
+  "download": your_download_value(true/false),
+  "fairplay_key": "your_fairplay_key",
+  "fairplay_iv": "your_fairplay_iv",
+  "fairplay_uri": "your_fairplay_uri"
 }
