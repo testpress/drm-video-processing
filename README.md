@@ -97,4 +97,4 @@ To add step 6 to your instructions, you can follow these guidelines:
     Response: b'{"iv":"c60e93703a0c423696b9dfa0e02b60d2","key":"a8031c8ba7474846b137ffc328cf2304","uri":"skd://4a961191b7764338b8a6ca3259023c2d"}'
     ```
 
-3. Update the values of FairPlay URI, Key, and ID in `config.json` provided in the response
+3. Update the values of FairPlay URI, Key, and IV in `config.json` provided in the response
