@@ -98,3 +98,20 @@ To add step 6 to your instructions, you can follow these guidelines:
     ```
 
 3. Update the values of FairPlay URI, Key, and IV in `config.json` provided in the response
+
+## Step 7: Run Fairplay Packager Script
+
+Run the `fairplay_packager.sh` script using the following commands:
+
+```bash
+chmod +x fairplay_packager.sh && ./fairplay_packager.sh
+```
+
+
+Upon successful execution, you should see the following message:
+
+```bash
+Packaging completed successfully.
+```
+
+You will find the generated M3U8 file (video.m3u8) in the current working directory.
