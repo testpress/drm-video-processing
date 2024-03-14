@@ -115,3 +115,15 @@ Packaging completed successfully.
 ```
 
 You will find the generated M3U8 file (video.m3u8) in the current working directory.
+
+## Step 8: Play the Encrypted Video Using FairPlay DRM
+
+To play the encrypted video using FairPlay DRM, follow these steps:
+
+1. Open the `index.html` file located in your project directory.
+
+2. Replace the placeholder values in the `player.src` section with the path to your FairPlay-encrypted M3U8 file (`video.m3u8`) and the FairPlay license URL obtained in [Step 5](#step-5-play-the-video-in-player).
+
+3. Save the changes to the `index.html` file.
+
+4. Navigate back to Step 5 and follow the instructions to play the encrypted video.
