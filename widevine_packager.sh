@@ -12,7 +12,7 @@ packager \
   in="${VIDEO_PATH},stream=video,output=h264_360p.mp4" \
   --enable_widevine_encryption \
   --signer testpress \
-  --key_server_url https://app.tpstreams.com/api/v1/"$ORG_CODE"/widevine_key/ \
+  --key_server_url https://license.tpstreams.com/api/v1/"$ORG_CODE"/widevine_key/ \
   --content_id "$CONTENT_ID" \
   --aes_signing_key "$WIDEVINE_AES_KEY" \
   --aes_signing_iv "$WIDEVINE_IV" \

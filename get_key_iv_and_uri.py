@@ -31,7 +31,7 @@ def get_key_iv_and_uri():
     print("Response:", response.content)
 
 def send_post_request(org_code, request_data):
-    url = f"https://app.tpstreams.com/api/v1/{org_code}/fairplay_key/"
+    url = f"https://license.tpstreams.com/api/v1/{org_code}/fairplay_key/"
     headers = {'Content-Type': 'application/json'}
     response = requests.post(url, json=request_data, headers=headers)
     return response
