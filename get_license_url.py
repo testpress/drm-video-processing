@@ -33,7 +33,7 @@ def get_license_url():
         encoded_data = base64.urlsafe_b64encode(data_str.encode()).decode()
 
         print("Encoded Data:", encoded_data)
-        LICENSE_URL = f"https://app.tpstreams.com/api/v1/{org_code}/drm_license/?data={encoded_data}"
+        LICENSE_URL = f"https://license.tpstreams.com/api/v1/{org_code}/drm_license/?data={encoded_data}"
         print("License URL:", LICENSE_URL)
 
 

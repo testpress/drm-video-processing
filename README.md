@@ -52,7 +52,7 @@ python3 get_license_url.py
 You will receive your license URL in the following format:
 
 ```
-License URL: https://app.tpstreams.com/api/v1/69xt46/drm_license/?data=eyJjb250ZW50X2RhdGEiOiJleUpqYjI1MFpXNTBYMmxrSWpvaVpHUmtaREZrWVdVNE9EWXlORE5pWlRnMU56RTJZekZtWWpnNE9UVTJORFVpTENKa2NtMWZkSGx3WlNJNkluZHBaR1YyYVc1bElpd2laRzkzYm14dllXUWlPbVpoYkhObGZRPT0iLCJzaWduYXR1cmUiOiI5QkM5aTloTFVMWHlmaXlBdXE5aHRhRGZYb3FRam9PWGtDOWlVbGd5Z3R3PSJ9
+License URL: https://license.tpstreams.com/api/v1/69xt46/drm_license/?data=eyJjb250ZW50X2RhdGEiOiJleUpqYjI1MFpXNTBYMmxrSWpvaVpHUmtaREZrWVdVNE9EWXlORE5pWlRnMU56RTJZekZtWWpnNE9UVTJORFVpTENKa2NtMWZkSGx3WlNJNkluZHBaR1YyYVc1bElpd2laRzkzYm14dllXUWlPbVpoYkhObGZRPT0iLCJzaWduYXR1cmUiOiI5QkM5aTloTFVMWHlmaXlBdXE5aHRhRGZYb3FRam9PWGtDOWlVbGd5Z3R3PSJ9
 ```
 The `get_license_url.py` script internally calls two methods, `get_encoded_content_data` and `generate_signature`, both of which are required to generate the license URL. Ensure you've run these steps before generating the license URL.
 
@@ -89,7 +89,7 @@ To add step 6 to your instructions, you can follow these guidelines:
     ```bash
     python3 get_key_iv_and_uri.py
     ```
-    This script will send a POST request to the URL `https://app.tpstreams.com/api/v1/{org_code}/fairplay_key/` and obtain the FairPlay URI, Key, and IV
+    This script will send a POST request to the URL `https://license.tpstreams.com/api/v1/{org_code}/fairplay_key/` and obtain the FairPlay URI, Key, and IV
    
 2. You will receive a response similar to the following:
 
