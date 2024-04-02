@@ -8,5 +8,6 @@
   "download": your_download_value(true/false),
   "fairplay_key": "your_fairplay_key",
   "fairplay_iv": "your_fairplay_iv",
-  "fairplay_uri": "your_fairplay_uri"
+  "fairplay_uri": "your_fairplay_uri",
+  "license_url":"your_license_uri"
 }
