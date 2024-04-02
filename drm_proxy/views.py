@@ -24,6 +24,7 @@ class DRMProxyView(APIView):
     parser_classes = [OctetStreamParser]
 
     def post(self, request, *args, **kwargs):
+        config_data = self.read_config()
         body = {
             "player_payload": base64.b64encode(self.request.data).decode('utf-8'),
             "widevine": {
@@ -35,7 +36,7 @@ class DRMProxyView(APIView):
                     {'track_type': 'AUDIO', 'security_level': 1, 'required_output_protection': {'hdcp': 'HDCP_V1'}}],
             }
         }
-        license_url = "http://127.0.0.1:8001/api/v1/gcdem4/drm_license/?data=eyJjb250ZW50X2RhdGEiOiJleUpqYjI1MFpXNTBYMmxrSWpvaVpHUmtaREZrWVdVNE9EWXlORE5pWlRnMU56RTJZekZtWWpnNE9UVTJORFVpTENKa2NtMWZkSGx3WlNJNkluZHBaR1YyYVc1bElpd2laRzkzYm14dllXUWlPbVpoYkhObGZRPT0iLCJzaWduYXR1cmUiOiI5QkM5aTloTFVMWHlmaXlBdXE5aHRhRGZYb3FRam9PWGtDOWlVbGd5Z3R3PSJ9"
+        license_url = config_data.get("licence_url","")
         license_response = requests.post(license_url, data=json.dumps(body),
                                          headers={"content-type": "application/json"})
         license_data = license_response.content
@@ -47,6 +48,17 @@ class DRMProxyView(APIView):
             content_type="application/octet-stream",
         )
 
+    def read_config(self):
+        try:
+            with open('config.json', 'r') as config_file:
+                config_data = json.load(config_file)
+                return config_data
+        except FileNotFoundError:
+            print("Error: config.json not found.")
+            return None
+        except json.JSONDecodeError:
+            print("Error: Invalid JSON format in config.json.")
+            return None
 
 def index_view(request):
     return render(request, template_name="index.html")
