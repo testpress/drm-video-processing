@@ -10,11 +10,12 @@ FAIRPLAY_URI=$(jq -r '.fairplay_uri' "$JSON_FILE")
 
 # Execute packager command
 packager -v=4 \
-  in="${VIDEO_PATH},stream=audio,output=audio.mp4" \
-  in="${VIDEO_PATH},stream=video,output=h264_360p.mp4" \
+  in="${VIDEO_PATH},stream=audio,output=static/audio.mp4" \
+  in="${VIDEO_PATH},stream=video,output=static/h264_360p.mp4" \
+  --enable_raw_key_encryption \
   --keys "label=:key_id=${CONTENT_ID}:key=${FAIRPLAY_KEY}:iv=${FAIRPLAY_IV}" \
   --protection_scheme cbcs \
   --protection_systems Fairplay \
   --hls_key_uri "$FAIRPLAY_URI" \
   --clear_lead 0 \
-  --hls_master_playlist_output video.m3u8
+  --hls_master_playlist_output static/video.m3u8

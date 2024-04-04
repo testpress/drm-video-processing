@@ -36,7 +36,7 @@ class DRMProxyView(APIView):
                     {'track_type': 'AUDIO', 'security_level': 1, 'required_output_protection': {'hdcp': 'HDCP_V1'}}],
             }
         }
-        license_url = config_data.get("licence_url","")
+        license_url = config_data.get("license_url","")
         license_response = requests.post(license_url, data=json.dumps(body),
                                          headers={"content-type": "application/json"})
         license_data = license_response.content
